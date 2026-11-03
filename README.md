@@ -55,7 +55,14 @@ The theme code itself is GPL, like all WordPress themes. The key controls who ge
 
 1. Make your changes in `astitva` and `astitva-core`.
 2. In PowerShell: `cd C:\Users\dell2\agency-island\tools` then `.\release.ps1 -Version 1.0.1 -Notes "What changed"`.
-3. Upload `astitva.zip`, `astitva-core.zip` and `update.json` from `dist\1.0.1` to your update location.
+3. Publish it. In Claude Code, run these one at a time (change 1.0.1 to your version):
+
+```
+! cd /c/Users/dell2/agency-island && cp dist/1.0.1/update.json update.json && git add -A && git commit -m "Release 1.0.1" && git push
+! cd /c/Users/dell2/agency-island && "/c/Program Files/GitHub CLI/gh.exe" release create v1.0.1 dist/1.0.1/astitva.zip dist/1.0.1/astitva-core.zip dist/1.0.1/update.json --repo digitalhulk/astitva --title "Astitva 1.0.1" --notes "What changed"
+```
+
+Run the release command first if you want sites to see the zips before the version number changes; either order works within a few minutes.
 
 Licensed sites check about every 12 hours and show the update in Dashboard > Updates. Settings > Astitva License has a **Check for updates now** button.
 
