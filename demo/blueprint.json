@@ -1,0 +1,30 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Astitva theme demo",
+    "description": "Astitva WordPress theme with Astitva Core, Elementor and the full demo content.",
+    "author": "digitalhulk"
+  },
+  "landingPage": "/",
+  "preferredVersions": { "php": "8.3", "wp": "latest" },
+  "features": { "networking": true },
+  "steps": [
+    { "step": "login", "username": "admin", "password": "password" },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "elementor" }, "options": { "activate": true } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "contact-form-7" }, "options": { "activate": true } },
+    {
+      "step": "installPlugin",
+      "pluginData": { "resource": "git:directory", "url": "https://github.com/digitalhulk/astitva", "ref": "main", "path": "astitva-core" },
+      "options": { "activate": true, "targetFolderName": "astitva-core" }
+    },
+    {
+      "step": "installTheme",
+      "themeData": { "resource": "git:directory", "url": "https://github.com/digitalhulk/astitva", "ref": "main", "path": "astitva" },
+      "options": { "activate": true, "targetFolderName": "astitva" }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; wp_set_current_user( 1 ); update_option( 'blogname', 'Astitva Demo' ); update_option( 'blogdescription', 'WordPress theme demo' ); echo 'PAGES=' . agic_import_all();"
+    }
+  ]
+}
