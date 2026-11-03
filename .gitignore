@@ -1,0 +1,7 @@
+# Build output and local test screenshots
+dist/
+qa/
+# Never commit signing keys
+*.pem
+*.key
+.env

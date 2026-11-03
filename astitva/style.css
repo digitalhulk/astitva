@@ -1,0 +1,16 @@
+/*
+Theme Name: Astitva
+Theme URI: https://example.com/astitva
+Author: Your Company
+Author URI: https://example.com
+Description: Lightweight custom agency theme with a floating island header, Theme Options panel and Elementor support. Pair with the Astitva Core plugin for widgets and demo content.
+Version: 1.0.0
+Requires at least: 6.5
+Tested up to: 6.9
+Requires PHP: 8.1
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astitva
+Tags: custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, blog
+*/
+/* Styles live in assets/scss and compile to assets/css/main.css */
