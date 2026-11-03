@@ -2,7 +2,7 @@
 
 ![Astitva theme](astitva/screenshot.png)
 
-**[Open the live demo](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/digitalhulk/astitva/main/demo/blueprint.json)**
+**[Open the live demo](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/digitalhulk/astitva/main/demo/live-a820ee8a.json)**
 
 The demo runs a complete WordPress site with Astitva in your own browser, free, with no sign-up. The first load takes 1 to 2 minutes while it installs Elementor and the demo pages. Nothing you change there is saved, and it does not affect any real site. To see the admin area, open `/wp-admin/` in the demo.
 
